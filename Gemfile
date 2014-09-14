@@ -11,6 +11,8 @@ gem 'rekognize'
 gem "paperclip"
 gem "cloudinary"
 gem "aws-sdk"
+gem "sprockets"
+
 
 group :development do
   gem 'better_errors'
