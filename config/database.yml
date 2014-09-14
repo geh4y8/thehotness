@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: doppelganger_development
+
+test:
+  adapter: postgresql
+  database: doppelganger_test

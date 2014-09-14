@@ -1,0 +1,15 @@
+
+<img src=<%= @photo.photo_url %>></img>
+
+<p><%= @photo.name %></p>
+
+
+<p>Age: <%= @result["face_detection"].first["age"] %></p>
+
+<p>Beauty: <%= ((@result["face_detection"].first["beauty"]).to_f * 100) %></p>
+
+<p>Race: <%= @result["face_detection"].first["race"] %></p>
+
+<p>Gender: <%= @result["face_detection"].first["gender"] %></p>
+
+<p>Emotion: <%= @result["face_detection"].first["emotion"] %></p>
