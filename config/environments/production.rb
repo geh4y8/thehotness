@@ -84,7 +84,7 @@ Rails.application.configure do
   :s3_credentials => {
     :bucket => "doppelgangercam",
     :access_key_id => "AKIAIZZ3O6ARHZ7RY7RQ",
-    :secret_access_key => "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"]
+    :secret_access_key => "KiLKSZSz4xutis4VweiITUhXcDQ8Ff35mhnPfXwh"
   }
 }
 end
