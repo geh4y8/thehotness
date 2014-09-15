@@ -1,3 +1,5 @@
+
+
 class Photo < ActiveRecord::Base
 
   has_attached_file :photo_choice, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default => ":rails_root/public/system/photos/no-image-available.png",
@@ -7,6 +9,10 @@ class Photo < ActiveRecord::Base
 
   after_create :identify
 
+  def picture_from_url(url)
+    self.photo_choice = URI.parse(url)
+  end
+
   def identify
     begin
       # Cloudinary::Uploader.upload(photo_choice.url)
@@ -14,7 +20,7 @@ class Photo < ActiveRecord::Base
         api_key: 'd27krKEkBgGMGkSs',
         api_secret: 'pfPCSFmsLPJtpU6t')
       client.face_recognize(
-          urls: self.photo_url,
+          urls: URI.parse(self.photo_url),
           jobs: 'face_age face_beauty face_race face_emotion face_gender')
     end
   end
