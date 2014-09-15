@@ -82,9 +82,9 @@ Rails.application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => "doppelgangercam",
-    :access_key_id => "AKIAIZZ3O6ARHZ7RY7RQ",
-    :secret_access_key => "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"
+    :bucket => ENV["S3_BUCKET_NAME"],
+    :access_key_id => ENV["AWS_ACCESS_KEY_ID"],
+    :secret_access_key => ENV["AWS_SECRET_ACCESS_KEY"]
   }
 }
 end
