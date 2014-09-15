@@ -20,7 +20,7 @@ class Photo < ActiveRecord::Base
         api_key: 'd27krKEkBgGMGkSs',
         api_secret: 'pfPCSFmsLPJtpU6t')
       client.face_recognize(
-          urls: URI.parse(self.photo_url),
+          urls: self.photo_url,
           jobs: 'face_age face_beauty face_race face_emotion face_gender')
     end
   end
