@@ -8,7 +8,6 @@ class PhotosController < ApplicationController
   end
 
   def create
-    #params[:photo] = params if params[:photo_url]
     @photo = Photo.new(photo_params)
     if @photo.save
       redirect_to photo_path(@photo)

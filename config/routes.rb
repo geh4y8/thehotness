@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     post 'upload', :on => :collection
   end
 
-  root to: "headshot_photos#new"
+  root to: "photos#new"
 end
