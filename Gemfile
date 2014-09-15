@@ -13,6 +13,8 @@ gem "cloudinary"
 gem "aws-sdk"
 gem "sprockets"
 gem 'headshot'
+gem 'd3_rails'
+gem 'pry'
 
 
 
