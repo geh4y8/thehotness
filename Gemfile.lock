@@ -58,11 +58,6 @@ GEM
     coffee-script-source (1.8.0)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
-    dotenv (0.11.1)
-      dotenv-deployment (~> 0.0.2)
-    dotenv-deployment (0.0.2)
-    dotenv-rails (0.11.1)
-      dotenv (= 0.11.1)
     erubis (2.7.0)
     execjs (2.2.1)
     headshot (0.1.6)
@@ -181,7 +176,6 @@ DEPENDENCIES
   binding_of_caller
   cloudinary
   coffee-rails
-  dotenv-rails
   headshot
   jquery-rails
   paperclip
