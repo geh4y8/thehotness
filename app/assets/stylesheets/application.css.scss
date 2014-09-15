@@ -13,8 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 body {
 
@@ -188,6 +189,10 @@ input:focus, textarea:focus {
     -moz-box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
     box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
    }
+#photo_div{
+    height: 400px;
+    overflow: hidden;
+}
 
 #take_photo {
     margin-top: 50px;
@@ -195,7 +200,14 @@ input:focus, textarea:focus {
     margin-right: 400px;
 }
 
-#show_photo {
-    margin-left: 300px;
-    border-radius: 100px;
+
+
+#recognition_results {
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    color: white;
+    font-size: 30px;
 }
+
+

@@ -9,10 +9,6 @@ class Photo < ActiveRecord::Base
 
   after_create :identify
 
-  def picture_from_url(url)
-    self.photo_choice = URI.parse(url)
-  end
-
   def identify
     begin
       # Cloudinary::Uploader.upload(photo_choice.url)

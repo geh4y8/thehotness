@@ -1,16 +1,22 @@
-
+<div id="photo_div" class="col-md-6">
 <img id="show_photo" src=<%= @photo.photo_url %>></img>
+</div>
 
-<p><%= @photo.name %></p>
-
+<div id="recognition_results" class="col-md-6">
 
 <p>Age: <%= @result["face_detection"].first["age"] %></p>
 
-<p>Beauty: <%= ((@result["face_detection"].first["beauty"]).to_f * 100) %></p>
+<p>Beauty: <%= ((@result["face_detection"].first["beauty"]).to_f * 100) %>%</p>
 
-<p>Race: <%= @result["face_detection"].first["race"] %></p>
+<p>Race: <% @result["face_detection"].first["race"].each do |k,v| %>
+          <%= "#{k}: #{v.to_f * 100}%" %>
+          <% end %>
+</p>
 
 <p>Gender: <%= @result["face_detection"].first["gender"] %></p>
 
-<p>Emotion: <%= @result["face_detection"].first["emotion"] %></p>
-<%= HeadshotPhoto.last %>
+<p>Emotions: <% @result["face_detection"].first["emotion"].each do |k,v| %>
+          <%= "#{k}: #{v.to_f * 100}%" %>
+          <% end %></p>
+
+</div>
