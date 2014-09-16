@@ -10,9 +10,8 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
     if @photo.save
-      photo_url = "/photos/#{@photo.id}"
-      render :js => "window.location.pathname='#{photo_url}'"
-      #redirect_to :action => "show", :id => @photo.id
+
+      redirect_to :action => "show", :id => @photo.id
     else
       render'new'
     end
