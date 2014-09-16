@@ -9,15 +9,15 @@ $(function(){
   });
 
   // Load snapper when a button is clicked
-  // $('#take_photo').click(function(){
-  //   Snapper.show({ // open snapper in an overlay window
-  //     complete: function(image){ // called when the photo has been saved
-  //       // e.g. set value of hidden form element
-  //       saveImage(image)
+  $('#take_photo').click(function(){
+    Snapper.show({ // open snapper in an overlay window
+      complete: function(image){ // called when the photo has been saved
+        // e.g. set value of hidden form element
+        saveImage(image)
 
 
-  //       $('#saved_image').val(image);
-  //     },
+        $('#saved_image').val(image);
+      },
       // instance config
        // override the default size, set it to medium
     });
