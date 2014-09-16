@@ -21,8 +21,6 @@ class Photo < ActiveRecord::Base
     end
   end
 
- def photo_choice_url
-    JSON.parse("/Users/Guy/Documents/epicodus/doppelganger/public/system/photos/photo_choices/000/000/001/medium/bar.jpeg")
-end
+
 
 end

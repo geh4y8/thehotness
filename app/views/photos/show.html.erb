@@ -6,17 +6,24 @@
 
 <p>Age: <%= @result["face_detection"].first["age"] %></p>
 
-<p>Beauty: <%= ((@result["face_detection"].first["beauty"]).to_f * 100) %>%</p>
+<p>Beauty: <%= ((@result["face_detection"].first["beauty"]).to_f * 100).round(2) %>%</p>
 
 <p>Race: <% @result["face_detection"].first["race"].each do |k,v| %>
-          <%= "#{k}: #{v.to_f * 100}%" %>
+          <%= "#{k}: #{(v.to_f * 100).round(2)}%" %>
           <% end %>
 </p>
 
-<p>Gender: <%= @result["face_detection"].first["gender"] %></p>
+<p>Gender:  <% if @result["face_detection"].first["sex"]== 0 %>
+            <%= "female" %>
+            <% elsif @result["face_detection"].first["sex"]== 1 %>
+            <%= "male" %>
+            <% else %>
+            <%= "unkown" %>
+            <% end %>
+             </p>
 
 <p>Emotions: <% @result["face_detection"].first["emotion"].each do |k,v| %>
-          <%= "#{k}: #{v.to_f * 100}%" %>
+          <%= "#{k}: #{(v.to_f * 100).round(2)}%" %>
           <% end %></p>
 
 </div>
