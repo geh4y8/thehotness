@@ -66,6 +66,11 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.1)
+    gon (5.2.0)
+      actionpack (>= 2.3.0)
+      json
+      multi_json
+      request_store (>= 1.0.5)
     headshot (0.1.6)
     hike (1.2.3)
     i18n (0.6.11)
@@ -124,6 +129,7 @@ GEM
     rekognize (1.0.5)
       rest-client
       rspec
+    request_store (1.1.0)
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
@@ -191,6 +197,7 @@ DEPENDENCIES
   cloudinary
   coffee-rails
   d3_rails
+  gon
   headshot
   jquery-rails
   paperclip

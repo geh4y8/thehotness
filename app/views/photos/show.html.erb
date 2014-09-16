@@ -6,11 +6,12 @@
 
 <p>Age: <%= @result["face_detection"].first["age"] %></p>
 
-<p>Beauty: <%= ((@result["face_detection"].first["beauty"]).to_f * 100).round(2) %>%</p>
+<p>Beauty: <%= beauty = ((@result["face_detection"].first["beauty"]).to_f * 100).round(0) %>%</p>
 
 <p>Race: <% @result["face_detection"].first["race"].each do |k,v| %>
-          <%= "#{k}: #{(v.to_f * 100).round(2)}%" %>
+          <%="#{k}: #{(v.to_f * 100).round(2)}%" %>
           <% end %>
+          <% race_p = (@result["face_detection"].first["race"].first[1] * 100).round(0) %>
 </p>
 
 <p>Gender:  <% if @result["face_detection"].first["sex"]== 0 %>
@@ -25,5 +26,24 @@
 <p>Emotions: <% @result["face_detection"].first["emotion"].each do |k,v| %>
           <%= "#{k}: #{(v.to_f * 100).round(2)}%" %>
           <% end %></p>
-
 </div>
+<div id="bar-chart">
+  <ul>
+    <li class="beauty">
+      <div class="end">beauty: <span class="value"><%= beauty %>%</span></div>
+    </li>
+    <li class="race">
+      <div class="end">race: <%= @race %>  <span class="value"><%= race_p %>%</span></div>
+    </li>
+    <li class="emotion-1">
+      <div class="end"><%= @emotion_names[0] %>: <span class="value"><%= @emotion_values[0] *100 %>%</span></div>
+    </li>
+    <li class="emotion-2">
+      <div class="end"><%= @emotion_names[1] %>: <span class="value"><%= @emotion_values[1] *100 %>%</span></div>
+    </li>
+    <li class="emotion-3">
+      <div class="end"><%= @emotion_names[2] %>: <span class="value"><%= @emotion_values[2] *100 %>%</span></div>
+    </li>
+  </ul>
+</div>
+

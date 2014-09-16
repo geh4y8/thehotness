@@ -17,6 +17,7 @@ gem 'd3_rails'
 gem 'pry'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'gon'
 
 
 
