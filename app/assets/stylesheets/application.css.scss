@@ -33,167 +33,11 @@ body {
 
 }
 
-#new_photo {
-    margin-left:auto;
-    margin-right:auto;
-    width: 570px;
-    height: 333px;
-    padding:30px;
-    border: 1px solid rgba(0,0,0,.2);
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    background: rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
-    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
-    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
-    overflow: hidden;
-    color: white;
-    text-align: center;
-    ::-webkit-input-placeholder {
-      color: #fff;
-    }
 
-    :-moz-placeholder{
-      color: #fff;
-    }
-
-    ::-moz-placeholder {
-        color: #fff;
-    }
-
-    :-ms-input-placeholder {
-    color: #fff;
-}
-}
-
-.textarea{
-    background: rgba(255, 255, 255, 0.4)  no-repeat scroll 16px 16px;
-    width: 500px;
-    height: 110px;
-    border: 1px solid rgba(255,255,255,.6);
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    display:block;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size:18px;
-    color:#fff;
-    padding-left:45px;
-    padding-right:20px;
-    padding-top:12px;
-    margin-bottom:20px;
-    overflow:hidden;
-
-}
-
-input {
-    width: 276px;
-    height: 48px;
-    border: 1px solid rgba(255,255,255,.4);
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    display:block;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size:18px;
-    color:#fff;
-    padding-left:20px;
-    padding-right:20px;
-    margin-bottom:20px;
-    text-align:center;
-}
-
-.submitbtn {
-    cursor:pointer;
-    }
-
-input.name {
-  background: rgba(255, 255, 255, 0.4) url(http://luismruiz.com/img/gemicon_name.png) no-repeat scroll 16px 16px;
-  padding-left:45px;
-}
-
-input.url {
-    background: rgba(255, 255, 255, 0.4) no-repeat scroll 16px 20px;
-    padding-left:45px;
-}
-
-input:focus, textarea:focus {
-    background-color: rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
-    -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
-    box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
-    overflow: hidden;
-}
-
-// .btn {
-//     width: 138px;
-//     height: 44px;
-//     -moz-border-radius: 4px;
-//     -webkit-border-radius: 4px;
-//     border-radius: 4px;
-//     float:right;
-//     border: 1px solid #253737;
-//     background: #416b68;
-//     background: -webkit-gradient(linear, left top, left bottom, from(#6da5a3), to(#416b68));
-//     background: -webkit-linear-gradient(top, #6da5a3, #416b68);
-//     background: -moz-linear-gradient(top, #6da5a3, #416b68);
-//     background: -ms-linear-gradient(top, #6da5a3, #416b68);
-//     background: -o-linear-gradient(top, #6da5a3, #416b68);
-//     background-image: -ms-linear-gradient(top, #6da5a3 0%, #416b68 100%);
-//     padding: 10.5px 21px;
-//     -webkit-border-radius: 6px;
-//     -moz-border-radius: 6px;
-//     border-radius: 6px;
-//     -webkit-box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
-//     -moz-box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
-//     box-shadow: rgba(255,255,255,0.1) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
-//     text-shadow: #333333 0 1px 0;
-//     color: #e1e1e1;
-// }
-
-// .btn:hover {
-//     border: 1px solid #253737;
-//     text-shadow: #333333 0 1px 0;
-//     background: #416b68;
-//     background: -webkit-gradient(linear, left top, left bottom, from(#77b2b0), to(#416b68));
-//     background: -webkit-linear-gradient(top, #77b2b0, #416b68);
-//     background: -moz-linear-gradient(top, #77b2b0, #416b68);
-//     background: -ms-linear-gradient(top, #77b2b0, #416b68);
-//     background: -o-linear-gradient(top, #77b2b0, #416b68);
-//     background-image: -ms-linear-gradient(top, #77b2b0 0%, #416b68 100%);
-//     color: #fff;
-//  }
-
-// .btn:active {
-//     margin-top:1px;
-//     text-shadow: #333333 0 -1px 0;
-//     border: 1px solid #253737;
-//     background: #6da5a3;
-//     background: -webkit-gradient(linear, left top, left bottom, from(#416b68), to(#416b68));
-//     background: -webkit-linear-gradient(top, #416b68, #609391);
-//     background: -moz-linear-gradient(top, #416b68, #6da5a3);
-//     background: -ms-linear-gradient(top, #416b68, #6da5a3);
-//     background: -o-linear-gradient(top, #416b68, #6da5a3);
-//     background-image: -ms-linear-gradient(top, #416b68 0%, #6da5a3 100%);
-//     color: #fff;
-//     -webkit-box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
-//     -moz-box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
-//     box-shadow: rgba(255,255,255,0) 0 1px 0, inset rgba(255,255,255,0.7) 0 1px 0;
-//    }
 #photo_div{
+    margin-top:100px;
     height: 400px;
     overflow: hidden;
-
 }
 
 
@@ -222,10 +66,12 @@ input:focus, textarea:focus {
 }
 
 
+
 #snapper0 {
+    z-index: 1;
     width:  500px;
     height: 500px;
-    position: fixed;
+    position: absolute;
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -247,16 +93,30 @@ li {
   box-sizing: border-box;
 }
 li div {
+  height:100px;
   padding: 10px 0;
   background-color: yellow;
   box-sizing: border-box;
-  -webkit-transition: width .6s ease;
-  transition: width .6s ease;
-  color: red;
+  -webkit-transition: width 2s ease-in-out,
+                    padding 3s linear;
+  -webkit-animation: mymove 3s infinite;
+  transition: width 2s ease-in-out;
+  //color: red;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   text-indent: 10px;
 }
+
+@-webkit-keyframes mymove {
+    0%   {top: 0px; background: red; }
+    100% {top: 200px; background: yellow; }
+}
+
+@keyframes mymove {
+    0%   {top: 0px; background: red; width: 100px;}
+    100% {top: 200px; background: yellow; width: 300px;}
+}
+
 li div.end {
   color: black;
 }
@@ -264,7 +124,7 @@ li div.start {
   width: 0%;
 }
 li.beauty div.end {
-  width: 50%;
+  width: 0%;
 }
 li.race div.end {
   width: 0%;
@@ -289,3 +149,145 @@ li.emotion-3 div.end {
 .value {
   float: right
 }
+
+//////animate
+@charset "UTF-8";
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+Copyright (c) 2014 Daniel Eden
+*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+.tada {
+  -webkit-animation-name: tada;
+          animation-name: tada;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+            transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+            transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+            transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+            transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+/////////////loading
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+path {
+  stroke: cyan;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 193.904983521;
+  fill: none;
+  animation:
+    load 4s linear infinite,
+    color 3s linear infinite;
+}
+
+@keyframes load {
+  from { stroke-dashoffset: 775.6199340820312; }
+}
+
+@keyframes color {
+  33% { stroke: yellow; }
+  66% { stroke: magenta; }
+}
+
+#overlay {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    line-height: 100vh;
+    text-align: center;
+    background: radial-gradient(#222, black);
+}
+
+#photo_wrap {
+
+}
+

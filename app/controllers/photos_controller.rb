@@ -23,6 +23,7 @@ class PhotosController < ApplicationController
     @result = @photo.identify
     gon.beauty =  ((@result["face_detection"].first["beauty"]).to_f * 100).round(0)
     gon.race_percentage = (@result["face_detection"].first["race"].first[1] * 100).round(0)
+    gon.age = @result["face_detection"].first["age"]
     @race = @result["face_detection"].first["race"].first[0]
     @emotion_names =[]
     @emotion_values = []
@@ -33,6 +34,10 @@ class PhotosController < ApplicationController
     gon.emotion1value = (@emotion_values[0] *100).round(0)
     gon.emotion2value = (@emotion_values[1] *100).round(0)
     gon.emotion3value = (@emotion_values[2] *100).round(0)
+  end
+
+  def edit
+
   end
 
   private

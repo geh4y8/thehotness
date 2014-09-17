@@ -4,7 +4,7 @@
 
 <div id="recognition_results" class="col-md-6">
 
-<p>Age: <%= @result["face_detection"].first["age"] %></p>
+<p>Age: <span id="age_display"><%= @result["face_detection"].first["age"] %></span></p>
 
 <% beauty = ((@result["face_detection"].first["beauty"]).to_f * 100).round(0) %>
 <% race_p = (@result["face_detection"].first["race"].first[1] * 100).round(0) %>
@@ -24,19 +24,19 @@
 <div id="bar-chart">
   <ul>
     <li class="beauty">
-      <div class="end">beauty: <span class="value"><%= beauty %>%</span></div>
+      <div class="end">BEAUTY <span class="value"><%= beauty %>%</span></div>
     </li>
     <li class="race">
-      <div class="end">race: <%= @race %>  <span class="value"><%= race_p %>%</span></div>
+      <div class="end"><%= @race.upcase %>  <span class="value"><%= race_p %>%</span></div>
     </li>
     <li class="emotion-1">
-      <div class="end"><%= @emotion_names[0] %>: <span class="value"><%= @emotion_values[0] *100 %>%</span></div>
+      <div class="end"><p><%= @emotion_names[0].upcase %> <span class="value"><%= (@emotion_values[0] *100).round(0) %>%</span></p></div>
     </li>
     <li class="emotion-2">
-      <div class="end"><%= @emotion_names[1] %>: <span class="value"><%= @emotion_values[1] *100 %>%</span></div>
+      <div class="end"><p><%= @emotion_names[1].upcase %> <span class="value"><%= (@emotion_values[1] *100).round(0) %>%</span></p></div>
     </li>
     <li class="emotion-3">
-      <div class="end"><%= @emotion_names[2] %>: <span class="value"><%= @emotion_values[2] *100 %>%</span></div>
+      <div class="end"><p><%= @emotion_names[2].upcase %> <span class="value"><%= (@emotion_values[2] *100).round(0) %>%</span></p></div>
     </li>
   </ul>
 </div>
