@@ -36,12 +36,12 @@ body {
 
 #photo_div{
     margin-top:100px;
-    height: 400px;
+    height: 420px;
     overflow: hidden;
 }
 
 
-#recognition_results {
+#recognition_results, #photo_age_gender {
     margin-top: 30px;
     font-family: 'Montserrat', sans-serif;
     text-align: right;
@@ -101,7 +101,7 @@ li div {
                     padding 3s linear;
   -webkit-animation: mymove 3s infinite;
   transition: width 2s ease-in-out;
-  //color: red;
+  font-size: 30px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   text-indent: 10px;
@@ -149,6 +149,41 @@ li.emotion-3 div.end {
 .value {
   float: right
 }
+
+
+
+////////////////////
+
+@mixin font-size($size: 1.6,$line: $size*1.5) {
+    font-size:   ($size) + px;
+    font-size:   $size/16 + rem;
+    line-height: $line/16 + rem;
+    line-height: ($line) + px;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+
+.circular-bar{
+  text-align: center;
+  .circular-bar-content{
+    margin-bottom: 70px;
+    margin-top: -95px;
+    text-align: center;
+    strong{
+      display: block;
+      font-weight: 600;
+      @include font-size(18,24);
+    }
+    label{
+      display: block;
+      font-weight: 300;
+      @include font-size(15,20);
+    }
+  }
+}
+
 
 //////animate
 @charset "UTF-8";
@@ -208,44 +243,7 @@ Copyright (c) 2014 Daniel Eden
           animation-name: tada;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
-@-webkit-keyframes wobble {
-  0% {
-    -webkit-transform: none;
-            transform: none;
-  }
-
-  15% {
-    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-            transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-  }
-
-  30% {
-    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-            transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-  }
-
-  45% {
-    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-            transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-  }
-
-  60% {
-    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-            transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-  }
-
-  75% {
-    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-            transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-  }
-
-  100% {
-    -webkit-transform: none;
-            transform: none;
-  }
-}
 
 /////////////loading
 svg {

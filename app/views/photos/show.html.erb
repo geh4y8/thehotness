@@ -1,30 +1,36 @@
-<div id="photo_div" class="col-md-6">
-<img id="show_photo" src=<%= @photo.photo_url %>></img>
-</div>
-
-<div id="recognition_results" class="col-md-6">
-
-<p>Age: <span id="age_display"><%= @result["face_detection"].first["age"] %></span></p>
-
-<% beauty = ((@result["face_detection"].first["beauty"]).to_f * 100).round(0) %>
-<% race_p = (@result["face_detection"].first["race"].first[1] * 100).round(0) %>
-
-
-<p>Gender:  <% if @result["face_detection"].first["sex"]== 0 %>
-            <%= "female" %>
-            <% elsif @result["face_detection"].first["sex"]== 1 %>
-            <%= "male" %>
+<div id="photo_top_wrap" class="col-md-6">
+  <div id="photo_age_gender">
+<p>AGE: <span id="age_display"><%= @result["face_detection"].first["age"] %> </span></p>
+  <p>GENDER:  <% if @result["face_detection"].first["sex"]== 0 %>
+              <%= "female" %>
+              <% elsif @result["face_detection"].first["sex"]== 1 %>
+              <%= "male" %>
             <% else %>
             <%= "unkown" %>
             <% end %>
-             </p>
+  </p>
+</div>
+<div id="photo_div" >
+  <img id="show_photo" src=<%= @photo.photo_url %>></img>
+</div>
+
+</div>
+<div id="recognition_results" class="col-md-6">
+
+
+
+<% @beauty = ((@result["face_detection"].first["beauty"]).to_f * 100).round(0) %>
+<% race_p = (@result["face_detection"].first["race"].first[1] * 100).round(0) %>
+
+
+
 
 
 </div>
 <div id="bar-chart">
   <ul>
     <li class="beauty">
-      <div class="end">BEAUTY <span class="value"><%= beauty %>%</span></div>
+      <div class="end">BEAUTY <span class="value"><%= @beauty %>%</span></div>
     </li>
     <li class="race">
       <div class="end"><%= @race.upcase %>  <span class="value"><%= race_p %>%</span></div>
