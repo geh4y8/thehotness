@@ -74,4 +74,5 @@ $(function(){
   $('.emotion-2 div.end').css({"width": gon.emotion2value + "%"})
   $('.emotion-3 div.end').css({"width": gon.emotion3value + "%"})
   $('.action-button').hide().delay(4000).fadeIn(2000);
+
 });

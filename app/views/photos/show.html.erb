@@ -11,25 +11,18 @@
   </p>
 </div>
 <div id="photo_div" >
-  <img id="show_photo" src=<%= @photo.photo_url %>></img>
+  <div id="figure">
+    <img id="show_photo" src=<%= @photo.photo_url %>></img>
+  </div>
 </div>
 <a href= '/' class="action-button shadow animates red">again?</a>
 
 </div>
-<div id="recognition_results" class="col-md-6">
-
-
 
 <% @beauty = ((@result["face_detection"].first["beauty"]).to_f * 100).round(0) %>
 <% race_p = (@result["face_detection"].first["race"].first[1] * 100).round(0) %>
-
-
-
-
-
-</div>
 <div id="bar-chart">
-  <ul>
+  <ul id="stat-ul">
     <li class="beauty">
       <div class="end">BEAUTY* <span class="value"><%= @beauty %>%</span></div>
     </li>
