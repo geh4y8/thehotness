@@ -4,7 +4,7 @@ $(function(){
   Snapper.configure({
     camera_security_type: 'remember',
     snapper_size: 'tiny', // set the default snapper size to tiny
-    snapper_border: 'square shadow', // render snapper with a round corners and a shadow
+    snapper_border: 'round shadow', // render snapper with a round corners and a shadow
     output_format: 'png', // switch from 'jpg' to use 'png' when saving.
     hide_effect_btn: true
     // see configuration section of docs for full list.
@@ -30,6 +30,7 @@ $(function(){
   //   $.ajax({url: "/photos", type: "POST", data: { photo: {photo_url: image}}});
   // }
   // Embed snapper into the page
+
   Snapper.embed({ // renders snapper in the page
     target: 'take_photo', // pass the ID of the div where you want snapper to embed
     wmode: 'opaque',
@@ -72,4 +73,5 @@ $(function(){
   $('.emotion-1 div.end').css({"width": gon.emotion1value + "%"})
   $('.emotion-2 div.end').css({"width": gon.emotion2value + "%"})
   $('.emotion-3 div.end').css({"width": gon.emotion3value + "%"})
+  $('.action-button').hide().delay(4000).fadeIn(2000);
 });
